@@ -106,11 +106,12 @@ roleRef:
   name: cluster-admin
 subjects:
   - kind: ServiceAccount
-	name: tiller
-	namespace: kube-system
+    name: tiller
+    namespace: kube-system
 
-	
-    kubectl create -f helm-rbac.yaml	
+
+Execute commands:	
+	kubectl create -f helm-rbac.yaml	
 	helm init --service-account tiller
 	
 Create Jenkins Pipeline "POC" as shown in below screenshot and build now
